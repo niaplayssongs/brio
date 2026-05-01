@@ -3,7 +3,10 @@ import Anthropic from "@anthropic-ai/sdk";
 import { supabaseAdmin } from "@/lib/supabase";
 import { SYSTEM_PROMPT } from "@/lib/systemPrompt";
 
-const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+const anthropic = new Anthropic({
+  apiKey: process.env.ANTHROPIC_API_KEY,
+  timeout: 300_000, // 5 minutes — full entries can take 90–180 seconds to generate
+});
 
 function toSlug(query: string): string {
   return query

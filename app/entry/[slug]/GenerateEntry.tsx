@@ -98,7 +98,7 @@ export default function GenerateEntry({
             </div>
           </div>
           <p className="font-sans text-sm text-mist text-center">
-            Researching and writing your entry. This takes about 15 seconds.
+            Researching and writing your entry. This usually takes 30–60 seconds.
           </p>
         </div>
       </main>
